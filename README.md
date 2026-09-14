@@ -1,16 +1,16 @@
 # Read100
 
-Private source-of-truth repository baseline for **Read100 v1.5 Evidence Loop**.
+Read100 5–9세 문해력 학습 서비스의 GitHub Source of Truth입니다.
 
-## Baseline policy
-- GitHub is intended to become the source of truth for source/config templates.
-- This baseline performs **no AWS, GENCOW, Staging, or Production mutation**.
-- Existing age-adaptive UI/content and Evidence Loop source are preserved from the validated reference package.
-- Pilot invite codes, Owner/Observer PINs, secrets, runtime DBs, and evidence exports must never be committed.
-- Human Acceptance remains a required release gate.
+- Baseline: Read100 v1.5
+- Evidence Learning Engine 포함
+- Source preservation: PASS (35/35 identical; runtime/secret files excluded or sanitized)
+- Baseline integrity CI: PASS
+- Runtime environments: deployment targets only
+- FounderOps: 별도 orchestration repository
+- Production deployment workflow: not enabled
 
-## Local configuration
-Copy `config.example.json` to `config.json` and provision real credentials outside Git.
+## Release rule
+GitHub source → automated integrity/regression gate → human acceptance → separately approved deployment/promotion.
 
-## Initial source provenance
-See `BASELINE_PROVENANCE.json`.
+기존 runtime과 FounderOps는 이 baseline migration 과정에서 변경하지 않았습니다.
