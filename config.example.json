@@ -1,0 +1,80 @@
+{
+  "version": "Read100-KR-v1.5-AWS-PILOT-A",
+  "owner_pin": "",
+  "participant_codes": [
+    "R5-01-REPLACE",
+    "R5-02-REPLACE",
+    "R5-03-REPLACE",
+    "R6-01-REPLACE",
+    "R6-02-REPLACE",
+    "R6-03-REPLACE",
+    "R7-01-REPLACE",
+    "R7-02-REPLACE",
+    "R7-03-REPLACE",
+    "R8-01-REPLACE",
+    "R8-02-REPLACE",
+    "R8-03-REPLACE",
+    "R9-01-REPLACE",
+    "R9-02-REPLACE",
+    "R9-03-REPLACE"
+  ],
+  "recommended_pilot_story_ids": [
+    1
+  ],
+  "pilot_days": 4,
+  "privacy_note": "실명·이메일·주소를 수집하지 않고 참가자 코드, 나이, 학습 행동만 기록합니다.",
+  "golden_stories": 25,
+  "remaining_24_status": "COMPLETE",
+  "full_test": true,
+  "ui_contract": "Age Adaptive × Screen Adaptive: 5-9 age-specific learning flow plus Mobile/Tablet/Small Laptop/Desktop structural reflow; age 8-9 mobile-first but desktop-balanced reader.",
+  "launch_port": 8919,
+  "launch_note": "v1.5 Evidence Loop; dedicated port 8919; preserves v1.4.5 child UI/content.",
+  "local_full_test": false,
+  "observer_auth": "Remote AWS Pilot: Owner PIN and Observer PIN required; child age locked by participant code.",
+  "interaction_contract": "Scene navigation must change hero image, badge, scene copy, active thumbnail, and record scene_view. Ages 8-9 provide both thumbnails and explicit Previous/Next scene buttons.",
+  "evidence_loop": "Observe → Recover → Transfer → Prove Growth",
+  "mastery_states": [
+    "independent_mastery",
+    "supported_mastery",
+    "fragile_understanding",
+    "needs_relearning"
+  ],
+  "proof_checkpoints": [
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "proof_story_ids": [
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "human_validation_target_false_positive": 0.05,
+  "read100_next_10_13": "FROZEN_UNTIL_5_9_EVIDENCE_GATES_PASS",
+  "participant_age_map": {
+    "R5-01-REPLACE": 5,
+    "R5-02-REPLACE": 5,
+    "R5-03-REPLACE": 5,
+    "R6-01-REPLACE": 6,
+    "R6-02-REPLACE": 6,
+    "R6-03-REPLACE": 6,
+    "R7-01-REPLACE": 7,
+    "R7-02-REPLACE": 7,
+    "R7-03-REPLACE": 7,
+    "R8-01-REPLACE": 8,
+    "R8-02-REPLACE": 8,
+    "R8-03-REPLACE": 8,
+    "R9-01-REPLACE": 9,
+    "R9-02-REPLACE": 9,
+    "R9-03-REPLACE": 9
+  },
+  "pilot_story_ids": [
+    1
+  ],
+  "aws_pilot": "A",
+  "deployment_target": "AWS ap-northeast-2 / EC2 + SQLite + CloudFront"
+}

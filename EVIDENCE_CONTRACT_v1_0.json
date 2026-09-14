@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "product": "Read100 5-9",
+  "principle": "Correct Answer is not treated as Mastery without recovery/transfer evidence.",
+  "loop": [
+    "observe",
+    "recover",
+    "transfer",
+    "prove_growth"
+  ],
+  "event_schema": {
+    "identity": [
+      "code",
+      "age",
+      "story_id",
+      "day",
+      "mission_id",
+      "skill"
+    ],
+    "observe": [
+      "mission_start",
+      "response_time",
+      "answer",
+      "scene_view",
+      "read_aloud"
+    ],
+    "recover": [
+      "hint_used",
+      "relearn_view",
+      "answer(attempt>1)"
+    ],
+    "transfer": [
+      "answer(skill=trans)",
+      "expression"
+    ],
+    "continuation": [
+      "day_complete",
+      "next_day",
+      "story_complete"
+    ]
+  },
+  "mastery_states": {
+    "independent_mastery": "Stable first-attempt understanding plus transfer.",
+    "supported_mastery": "Initial difficulty followed by support, recovery, and transfer.",
+    "fragile_understanding": "Core success but transfer failure.",
+    "needs_relearning": "Understanding remains unstable after support."
+  },
+  "six_literacy_skills": {
+    "vocabulary": [
+      "word"
+    ],
+    "literal_understanding": [
+      "under",
+      "important",
+      "ending"
+    ],
+    "sequence_cause": [
+      "seq",
+      "cause",
+      "ce"
+    ],
+    "emotion_intent": [
+      "emo",
+      "evi"
+    ],
+    "inference_evidence": [
+      "lesson",
+      "rc",
+      "re",
+      "rl"
+    ],
+    "expression_transfer": [
+      "trans",
+      "speech",
+      "writing"
+    ]
+  },
+  "recovery_rule": [
+    "first attempt",
+    "attention hint",
+    "retry",
+    "relearn",
+    "retry",
+    "classify recovery"
+  ],
+  "transfer_rule": "Day 4 trans task uses a changed situation and is stored separately.",
+  "growth_rule": "Compare first-attempt, hint dependency, recovery, transfer and completion by checkpoint block.",
+  "proof_checkpoints": {
+    "20": 5,
+    "40": 10,
+    "60": 15,
+    "80": 20,
+    "100": 25
+  },
+  "release_rule": "Automated PASS does not imply Pilot/Release Ready; Human Validation required."
+}

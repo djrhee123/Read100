@@ -1,0 +1,265 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Read100 한국어 Pilot v1.4.5</title><style>
+:root{--bg:#f6f8fc;--card:#fff;--line:#dde4ee;--ink:#172033;--muted:#5f6c80;--blue:#173f78;--orange:#ff7a18;--green:#0f8a5f;--greenbg:#ecfdf5;--warn:#fff7ea}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif}button,input,textarea{font:inherit}img{max-width:100%;display:block}button{cursor:pointer}
+.wrap{max-width:1240px;margin:auto;padding:12px}.hidden{display:none!important}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.brand{font-size:34px;font-weight:950;color:var(--blue)}.brand em{color:var(--orange);font-style:normal}.nav{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 14px;font-weight:850;color:var(--ink)}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px}.hero h1{margin:0 0 6px;font-size:36px}.sub{color:var(--muted);line-height:1.6}.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.step,.box,.storybox,.mission,.metric,.library,.chip,.scene-card,.wordbox{border:1px solid var(--line);border-radius:18px;background:#fff}.step{padding:12px;background:#f8fafc}.step b{display:block;color:#315a94;font-size:13px}.step span{display:block;margin-top:5px;color:var(--muted);font-size:13px;line-height:1.45}.box{padding:14px}.code-row{display:flex;gap:8px;flex-wrap:wrap}.code-row input{flex:1;min-width:220px;border:1px solid #cfd7e3;border-radius:14px;padding:14px}.help{min-height:20px;margin-top:8px;color:#4b5563;font-size:13px}.age-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}.age{padding:16px;text-align:center}.age b{display:block;font-size:22px}.age span{display:block;margin-top:5px;color:var(--muted);font-size:14px}
+.libgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px}.library{padding:0;overflow:hidden;position:relative;text-align:left}.library img{width:100%;aspect-ratio:4/3;object-fit:cover}.library .body{padding:12px}.library p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.done{position:absolute;right:10px;top:10px;background:#ecfdf5;border:1px solid #9fddc0;color:#0e7d54;border-radius:999px;padding:5px 8px;font-size:12px;font-weight:900}
+.storyhead h2{margin:0}.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.chip{padding:12px;text-align:left}.chip.on{background:#eef4ff;border-color:#b9cdef}.chip.done{background:var(--greenbg);border-color:#a4dec3}.chip b{display:block}.chip span{display:block;margin-top:4px;color:var(--muted);font-size:12px}
+.storylayout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:12px;margin-top:12px}.viewer,.rightcol,.fulltext,.missions,.metrics{display:grid;gap:12px}.storybox{overflow:hidden}.heroimg{position:relative}.heroimg img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#edf2f7}.badge{position:absolute;left:12px;top:12px;background:rgba(255,255,255,.95);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:900}.caption{padding:14px}.caption h3{margin:0 0 8px}.bigtext{font-size:26px;line-height:1.6}.thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:0 14px 14px}.thumbs button{padding:0;border:2px solid transparent;border-radius:12px;overflow:hidden;background:#fff}.thumbs button.on{border-color:#2d6ad3}.thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover}.wordbox{padding:14px;background:#f8fafc}.wordbox p{margin:6px 0 0;color:var(--muted);line-height:1.6}.scene-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}.scene-list{display:grid;gap:10px}.scene-card img{width:100%;aspect-ratio:4/3;object-fit:cover}.scene-card .txt{padding:12px}.scene-card b{font-size:12px;color:#3565a7}.scene-card p{margin:6px 0 0;line-height:1.7}
+.fulltext{padding:14px;border:1px solid var(--line);border-radius:18px;background:#f8fafc;line-height:1.8;font-size:17px}.missions .title{font-size:26px;font-weight:950}.mission-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.mission{padding:14px}.mission h3{margin:0 0 8px}.mission p{margin:0 0 10px;color:var(--muted);line-height:1.6}.options{display:grid;gap:8px}.choice{display:flex;align-items:center;width:100%;min-height:52px;text-align:left;border:1px solid #d7deea;background:#fff;border-radius:14px;padding:12px 14px;font-weight:700;color:var(--ink)}.choice.correct{background:var(--greenbg);border-color:#89d9b1}.choice.wrong{background:var(--warn);border-color:#efb168}.feedback{min-height:22px;margin-top:8px;font-size:13px;font-weight:850;color:#415064}.hint{display:none;margin-top:8px;padding:10px 12px;border-radius:12px;background:#eef4ff;color:#35598d;font-size:13px;line-height:1.55}.hint.show{display:block}.talk{width:132px;height:132px;border:none;border-radius:50%;background:var(--blue);color:#fff;font-size:18px;font-weight:950;display:grid;place-items:center;margin:10px auto}.talk span{display:block;margin-top:4px}.sayhelp{margin-top:10px;padding:12px;background:#fff8e8;border:1px solid #f1d596;border-radius:14px;color:#5d4b17;line-height:1.6}.sayhelp b{display:block;margin-bottom:4px}.mission textarea{width:100%;min-height:120px;border:1px solid #cfd7e3;border-radius:14px;padding:12px;resize:vertical}.survey{padding:16px;border:1px solid #b7e4cb;border-radius:18px;background:linear-gradient(135deg,#f6fff8,#fff);margin-top:12px}.survey-row{margin-top:10px}.survey-row b{display:block;margin-bottom:6px}.emoji-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.emoji{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;font-weight:850}.emoji.sel{background:#eef4ff;border-color:#b7caed}.end{padding:20px;border:1px solid #b7e4cb;border-radius:22px;background:linear-gradient(135deg,#f3fff8,#fff);text-align:center;margin-top:12px}.end h2{margin:6px 0 8px;color:#0d7049}.metricwrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.metric{padding:14px}.metric b{display:block;font-size:22px;color:var(--blue)}.metric small{display:block;margin-top:4px;color:var(--muted)}
+@media (max-width:1023px){.grid2,.storylayout{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.age-grid{grid-template-columns:repeat(3,1fr)}.libgrid{grid-template-columns:repeat(3,1fr)}.metricwrap{grid-template-columns:repeat(2,1fr)}}@media (max-width:767px){.wrap{padding:8px}.hero h1{font-size:28px}.brand{font-size:30px}.age-grid,.mission-grid,.metricwrap{grid-template-columns:1fr}.libgrid{grid-template-columns:1fr 1fr}.chips{display:flex;overflow:auto}.chip{min-width:220px}.bigtext{font-size:20px}.thumbs{grid-template-columns:repeat(3,1fr)}.scene-nav,.emoji-row{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+/* v1.4 Age-5 Kid-first UI Contract */
+body[data-age="5"] .wrap{max-width:900px;padding:10px}
+body[data-age="5"] .top{margin-bottom:8px}
+body[data-age="5"] .brand{font-size:28px}
+body[data-age="5"] .top .btn{padding:9px 12px;font-size:14px}
+body[data-age="5"] #storyScreen>.panel.storyhead{padding:10px 14px;border-radius:18px}
+body[data-age="5"] #stTitle{font-size:24px;margin:0}
+body[data-age="5"] #stSub{display:none}
+body[data-age="5"] #chips{margin-top:8px}
+body[data-age="5"] #storyScreen>.panel#story{padding:10px;border-radius:20px}
+body[data-age="5"] #storyScreen>.panel:last-child{display:none}
+body[data-age="5"] .chips{overflow:visible}
+.kid-day-progress{display:flex;align-items:center;justify-content:center;gap:10px;padding:4px 0}
+.kid-day-progress .daydot{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#edf2f7;color:#667085;font-weight:950;border:2px solid #dce3ee}
+.kid-day-progress .daydot.on{background:#173f78;color:#fff;border-color:#173f78;transform:scale(1.07)}
+.kid-day-progress .daydot.done{background:#eaf9f1;color:#08794c;border-color:#9bd8b8}
+.kid5-shell{max-width:760px;margin:0 auto}
+.kid5-card{background:#fff;border:1px solid #e2e7ef;border-radius:24px;overflow:hidden;box-shadow:0 4px 18px rgba(31,55,88,.06)}
+.kid5-visual{position:relative;background:#eef3f8}
+.kid5-visual img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.kid5-count{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.96);border-radius:999px;padding:7px 11px;font-weight:950;font-size:14px}
+.kid5-scene-dots{display:flex;justify-content:center;gap:7px;padding:12px 0 0}
+.kid5-scene-dots i{display:block;width:12px;height:12px;border-radius:50%;background:#d6deea}
+.kid5-scene-dots i.on{background:#173f78;transform:scale(1.25)}
+.kid5-body{padding:18px}
+.kid5-label{font-size:14px;font-weight:950;color:#42658e;margin-bottom:6px}
+.kid5-text{font-size:28px;line-height:1.55;font-weight:850;letter-spacing:-.02em}
+.kid5-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.kid5-bigbtn{min-height:66px;border:none;border-radius:18px;padding:14px 16px;font-size:19px;font-weight:950;cursor:pointer;background:#173f78;color:#fff}
+.kid5-bigbtn.secondary{background:#fff;color:#173f78;border:2px solid #ced9e8}
+.kid5-bigbtn.listen{grid-column:1/-1;background:#fff7e8;color:#6a4a00;border:2px solid #f0d28b}
+.kid5-word{margin-top:14px;padding:13px 15px;border-radius:16px;background:#f3f8ff;border:1px solid #dce9fb;font-size:16px;line-height:1.5}
+.kid5-word strong{font-size:18px;color:#173f78}
+.kid5-mission{padding:18px}
+.kid5-mission h2{margin:0 0 8px;font-size:25px}
+.kid5-question{font-size:24px;line-height:1.45;font-weight:850;margin:10px 0 14px}
+.kid5-options{display:grid;gap:11px}
+.kid5-choice{width:100%;min-height:70px;border:2px solid #d6dfec;background:#fff;border-radius:18px;padding:15px 17px;text-align:left;font-size:18px;line-height:1.45;font-weight:850;cursor:pointer}
+.kid5-choice.correct{background:#eaf9f1;border-color:#81cda8}
+.kid5-choice.wrong{background:#fff3e6;border-color:#efb168}
+.kid5-feedback{min-height:26px;margin-top:12px;font-size:17px;font-weight:900;color:#415064}
+.kid5-hint{display:none;margin-top:10px;padding:13px;border-radius:15px;background:#eef4ff;color:#35598d;font-size:16px;line-height:1.5}
+.kid5-hint.show{display:block}
+.kid5-relearn{display:none;margin-top:10px;padding:12px;border-radius:16px;background:#fffbea;border:1px solid #efd992}
+.kid5-relearn.show{display:block}
+.kid5-relearn img{width:100%;max-height:260px;object-fit:cover;border-radius:13px}
+.kid5-relearn p{font-size:17px;line-height:1.5;font-weight:800}
+.kid5-next{display:none;margin-top:12px;width:100%}
+.kid5-next.show{display:block}
+.kid5-mic{width:150px;height:150px;border:0;border-radius:50%;display:grid;place-items:center;margin:22px auto;background:#173f78;color:#fff;font-size:22px;font-weight:950;cursor:pointer}
+.kid5-complete{text-align:center;padding:24px}
+.kid5-complete .emoji{font-size:62px}
+.kid5-survey{display:grid;gap:14px;margin-top:16px;text-align:left}
+.kid5-survey-card{padding:14px;border-radius:17px;background:#f8fafc;border:1px solid #e1e7ef}
+.kid5-survey-card b{display:block;font-size:19px;margin-bottom:10px}
+.kid5-emojirow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kid5-emoji{min-height:62px;border-radius:16px;border:2px solid #d8e0eb;background:#fff;font-size:28px;cursor:pointer}
+.kid5-emoji.sel{border-color:#173f78;background:#eef4ff}
+.kid5-progress-note{text-align:center;font-size:14px;color:#6a7485;margin:7px 0 12px}
+@media(max-width:600px){.kid5-text{font-size:23px}.kid5-question{font-size:21px}.kid5-actions{grid-template-columns:1fr}.kid5-bigbtn.listen{grid-column:auto}.kid5-choice{font-size:17px;min-height:64px}}
+/* v1.4.1: unmistakable kid-first library + runtime marker */
+.version-pill{font-size:12px;font-weight:900;color:#5d6a7c;background:#eef3f8;border:1px solid #d8e1ed;border-radius:999px;padding:5px 9px;margin-left:8px;vertical-align:middle}
+body[data-age="5"] #libraryScreen{max-width:820px;margin:0 auto;padding:14px}
+body[data-age="5"] #libraryScreen>h2{font-size:26px}
+body[data-age="5"] #libraryScreen>.sub{font-size:15px;margin:6px 0 12px}
+.kid5-library{display:grid;gap:16px;margin-top:12px}
+.kid5-library-hero{display:grid;grid-template-columns:1.05fr .95fr;background:#fff;border:2px solid #dbe5f2;border-radius:24px;overflow:hidden;box-shadow:0 5px 20px rgba(31,55,88,.07)}
+.kid5-library-hero img{width:100%;height:100%;min-height:270px;object-fit:cover}
+.kid5-library-copy{padding:20px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.kid5-library-copy .eyebrow{font-size:14px;font-weight:950;color:#42658e}
+.kid5-library-copy h3{font-size:28px;margin:0;line-height:1.25}
+.kid5-library-copy p{font-size:16px;line-height:1.5;color:#657184;margin:0}
+.kid5-library-copy .kid5-bigbtn{margin-top:4px}
+.kid5-all-toggle{width:100%;min-height:62px;border-radius:18px;border:2px solid #ced9e8;background:#fff;color:#173f78;font-weight:950;font-size:18px}
+.kid5-all-stories{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kid5-storypick{padding:0;overflow:hidden;text-align:left;border:2px solid #e0e6ef;border-radius:20px;background:#fff;position:relative}
+.kid5-storypick img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.kid5-storypick .body{padding:13px}
+.kid5-storypick .body b{font-size:18px;line-height:1.3}
+.kid5-storypick .body p{margin:5px 0 0;color:#697688;font-size:14px}
+@media(max-width:650px){.kid5-library-hero{grid-template-columns:1fr}.kid5-library-hero img{min-height:0;aspect-ratio:4/3}.kid5-library-copy{padding:16px}.kid5-library-copy h3{font-size:24px}.kid5-all-stories{grid-template-columns:1fr}}
+
+/* v1.4.5 Age Adaptive × Screen Adaptive Responsive Contract */
+.version-pill{display:inline-flex;margin-left:10px;vertical-align:middle;padding:5px 9px;border-radius:999px;background:#eef4ff;border:1px solid #c9d8ef;color:#244f87;font-size:12px;font-weight:900}
+body[data-age="8"] .wrap,body[data-age="9"] .wrap{max-width:1320px}
+body[data-age="8"] #storyScreen>.panel#story,body[data-age="9"] #storyScreen>.panel#story{padding:16px}
+body[data-age="8"] .storyhead,body[data-age="9"] .storyhead{padding:16px 18px}
+body[data-age="8"] #stTitle,body[data-age="9"] #stTitle{font-size:25px;margin:0 0 4px}
+body[data-age="8"] #stSub,body[data-age="9"] #stSub{margin:0;font-size:14px}
+body[data-age="8"] .chips,body[data-age="9"] .chips{display:block;margin-top:12px}
+.senior-stepper{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.senior-step{min-width:0;display:flex;align-items:center;gap:9px;text-align:left;border:1px solid #dce3ee;background:#fff;border-radius:14px;padding:9px 10px;color:var(--ink)}
+.senior-step.on{background:#eef4ff;border-color:#a9c3e8;box-shadow:inset 0 0 0 1px #c4d7f1}
+.senior-step.done{background:#effbf5;border-color:#b8e2cb}
+.senior-step .step-no{flex:0 0 28px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#edf1f6;font-weight:950;color:#526174}
+.senior-step.on .step-no{background:#173f78;color:#fff}
+.senior-step.done .step-no{background:#0f8a5f;color:#fff}
+.senior-step .step-copy{min-width:0;display:grid;gap:2px}
+.senior-step b{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.senior-step small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.senior-shell{display:grid;gap:18px}
+.senior-reader{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:16px;align-items:start}
+.senior-visual,.senior-reading,.senior-activity{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden}
+.senior-hero{position:relative;background:#eef2f7}
+.senior-hero img{width:100%;aspect-ratio:4/3;object-fit:cover;max-height:430px}
+.senior-badge{position:absolute;left:12px;top:12px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.96);font-size:12px;font-weight:950}
+.senior-scene-copy{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:14px 15px;border-top:1px solid #edf1f5}
+.senior-scene-copy p{margin:5px 0 0;line-height:1.62;font-size:16px}
+.senior-eyebrow{display:block;color:#315f98;font-size:12px;font-weight:950;letter-spacing:.01em}
+.senior-listen{flex:0 0 auto;white-space:nowrap}
+.senior-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;padding:0 14px 14px}
+.senior-thumbs button{position:relative;padding:0;border:2px solid transparent;background:#fff;border-radius:10px;overflow:hidden;min-width:0}
+.senior-thumbs button.on{border-color:#2d6ad3;box-shadow:0 0 0 2px #e0eaff}
+.senior-thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.senior-thumbs span{position:absolute;right:4px;bottom:4px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.92);font-size:10px;font-weight:950}
+.senior-scene-nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px 14px}
+.senior-scene-nav .btn{min-height:46px}
+.btn:disabled{opacity:.42;cursor:not-allowed;background:#f3f5f8;color:#7a8494}
+.senior-reading{padding:17px;display:grid;gap:14px}
+.senior-reading-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.senior-reading-head h3{margin:4px 0 0;font-size:22px}
+.senior-fulltext{padding:16px 17px;background:#f8fafc;border:1px solid #e1e7ef;border-radius:16px;font-size:17px;line-height:1.78;white-space:pre-line}
+.senior-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.senior-meta-card{padding:13px 14px;border-radius:15px;border:1px solid #dfe6ef;background:#fff}
+.senior-meta-card.word{background:#f4f8ff;border-color:#d8e5f7}.senior-meta-card.goal{background:#fff9ef;border-color:#f0dfbc}
+.senior-meta-card b{display:block;font-size:16px;margin-top:5px}.senior-meta-card p{margin:5px 0 0;color:var(--muted);line-height:1.55;font-size:13px}
+.senior-activity{padding:17px}
+.senior-activity>.missions{gap:10px}
+.senior-activity .missions .title{font-size:23px}
+.senior-activity .mission-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.senior-activity .mission{padding:13px}
+.senior-activity .mission h3{font-size:17px}
+.senior-activity .mission p{font-size:14px}
+.senior-activity .choice{min-height:48px;padding:10px 12px;font-size:14px}
+/* 6-7 desktop: keep picture-first but prevent oversized visual/sidebar imbalance */
+body[data-age="6"] .wrap,body[data-age="7"] .wrap{max-width:1180px}
+body[data-age="6"] .heroimg img,body[data-age="7"] .heroimg img{max-height:520px}
+/* Small laptop */
+@media (min-width:1024px) and (max-width:1365px){
+ body[data-age="8"] .wrap,body[data-age="9"] .wrap{max-width:1120px;padding:10px}
+ .senior-reader{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:12px}
+ .senior-hero img{max-height:360px}
+ .senior-fulltext{font-size:16px;line-height:1.68;padding:14px}
+ .senior-reading{padding:14px}.senior-meta{grid-template-columns:1fr}
+ .senior-step small{display:none}
+}
+/* Tablet: reflow to one reading column, keep visual/navigation compact */
+@media (min-width:600px) and (max-width:1023px){
+ body[data-age="8"] .wrap,body[data-age="9"] .wrap{max-width:820px}
+ body[data-age="8"] #storyScreen>.panel#story,body[data-age="9"] #storyScreen>.panel#story{padding:12px}
+ .senior-stepper{grid-template-columns:repeat(4,1fr)}
+ .senior-step{display:grid;justify-items:center;text-align:center;padding:8px 5px}.senior-step .step-copy b{font-size:11px}.senior-step small{display:none}
+ .senior-reader{grid-template-columns:1fr;gap:12px}
+ .senior-hero img{aspect-ratio:16/9;max-height:410px}
+ .senior-scene-copy{align-items:center}
+ .senior-reading{padding:15px}.senior-fulltext{font-size:17px;line-height:1.75}
+ .senior-meta{grid-template-columns:1fr 1fr}
+ .senior-activity .mission-grid{grid-template-columns:1fr 1fr}
+ .libgrid{grid-template-columns:repeat(3,1fr)}
+}
+/* Mobile: single column, readable cards, no horizontal scrolling */
+@media (max-width:599px){
+ body[data-age="8"] .wrap,body[data-age="9"] .wrap{padding:7px;max-width:none}
+ body[data-age="8"] .top,body[data-age="9"] .top{align-items:flex-start}
+ body[data-age="8"] .brand,body[data-age="9"] .brand{font-size:27px}
+ body[data-age="8"] .version-pill,body[data-age="9"] .version-pill{display:block;width:max-content;margin:3px 0 0;font-size:10px}
+ body[data-age="8"] .storyhead,body[data-age="9"] .storyhead{padding:11px;border-radius:17px}
+ body[data-age="8"] #stTitle,body[data-age="9"] #stTitle{font-size:21px}
+ body[data-age="8"] #stSub,body[data-age="9"] #stSub{font-size:12px;line-height:1.4}
+ .senior-stepper{grid-template-columns:repeat(4,1fr);gap:5px}
+ .senior-step{display:grid;justify-items:center;text-align:center;padding:6px 3px;border-radius:11px;gap:3px}
+ .senior-step .step-no{width:25px;height:25px;flex-basis:25px;font-size:12px}
+ .senior-step .step-copy b{font-size:9px;white-space:normal;line-height:1.2}.senior-step small{display:none}
+ body[data-age="8"] #storyScreen>.panel#story,body[data-age="9"] #storyScreen>.panel#story{padding:7px;border-radius:17px}
+ .senior-shell{gap:9px}.senior-reader{grid-template-columns:1fr;gap:9px}
+ .senior-visual,.senior-reading,.senior-activity{border-radius:16px}
+ .senior-hero img{aspect-ratio:4/3;max-height:none}
+ .senior-scene-copy{display:grid;gap:9px;padding:11px}.senior-scene-copy p{font-size:15px;line-height:1.55}.senior-listen{width:100%}
+ .senior-thumbs{gap:4px;padding:0 9px 10px}.senior-thumbs button{border-radius:7px}.senior-thumbs span{display:none}
+ .senior-scene-nav{padding:0 9px 10px;grid-template-columns:1fr 1fr}
+ .senior-reading{padding:11px;gap:10px}.senior-reading-head{align-items:flex-end}.senior-reading-head h3{font-size:19px}.senior-reading-head .btn{padding:8px 9px;font-size:12px}
+ .senior-fulltext{font-size:16px;line-height:1.68;padding:12px;border-radius:13px}
+ .senior-meta{grid-template-columns:1fr;gap:7px}.senior-meta-card{padding:11px}
+ .senior-activity{padding:11px}.senior-activity .missions .title{font-size:21px}.senior-activity .mission-grid{grid-template-columns:1fr}.senior-activity .mission{padding:12px}
+ .libgrid{grid-template-columns:1fr 1fr;gap:8px}.library .body{padding:9px}.library p{font-size:11px}
+}
+/* Wide desktop: do not stretch content just because monitor is wide */
+@media (min-width:1600px){
+ body[data-age="8"] .wrap,body[data-age="9"] .wrap{max-width:1280px}
+ .senior-reader{grid-template-columns:560px minmax(0,1fr)}
+ .senior-hero img{max-height:420px}
+}
+
+.relearn-panel{display:none;margin-top:10px;padding:10px 12px;border-radius:12px;background:#fffbea;border:1px solid #efd992}.relearn-panel.show{display:block}
+</style></head><body><div class="wrap"><div class="top"><div class="brand">Read<em>100</em><span class="version-pill">v1.5 Evidence Loop</span></div><div class="nav"><button class="btn" onclick="goFullTest()">← 처음 화면</button><button class="btn" onclick="goLibrary()">도서관</button></div></div>
+<section id="login" class="panel hero"><h1>25편 · 100일 문해력 성장</h1><p class="sub">같은 이야기라도 5세부터 9세까지 다르게 읽고 생각할 수 있도록 만든 한국어 Read100 Pilot입니다.</p><div class="grid2" style="margin-top:14px"><div class="box"><h2 style="margin:0">어떻게 하나요?</h2><div class="steps"><div class="step"><b>1단계</b><span>초대 코드를 넣고 시작해요.</span></div><div class="step"><b>2단계</b><span>나이를 고르면 맞는 방식이 열려요.</span></div><div class="step"><b>3단계</b><span>한 이야기를 4일 동안 읽어요.</span></div><div class="step"><b>4단계</b><span>마지막에 Survey를 해요.</span></div></div></div><div style="display:grid;gap:14px"><div class="box"><h2 style="margin:0">초대 코드로 시작</h2><div class="code-row" style="margin-top:10px"><input id="codeInput" placeholder="예: P01-ABC123"><button class="btn primary" onclick="login()">시작하기</button></div><div class="help" id="loginFb"></div></div><div class="box"><b>파일럿 안내</b><p class="sub" style="margin:8px 0 0">5~7세는 그림·듣기·선택하기 중심, 8~9세는 읽기·근거 찾기·짧은 쓰기 중심입니다.</p></div></div></div></section>
+<section id="ageScreen" class="panel hidden"><h1 style="margin:0 0 6px">나이를 골라주세요</h1><p class="sub">같은 이야기도 나이에 따라 문장 길이와 질문 깊이가 달라집니다.</p><div class="age-grid" id="ageGrid"></div><div class="help" id="ageFb"></div></section>
+<section id="libraryScreen" class="panel hidden"><h2 style="margin:0">이야기 도서관</h2><p class="sub">25편의 이야기를 4일씩, 모두 100일 과정으로 읽어요. <b id="who"></b></p><div class="libgrid" id="lib"></div></section>
+<section id="storyScreen" class="hidden"><div class="panel storyhead"><h2 id="stTitle"></h2><p class="sub" id="stSub"></p><div class="chips" id="chips"></div></div><div class="panel" id="story"></div><div class="panel"><b>오늘 학습 기록</b><div class="metricwrap"><div class="metric"><b id="mDay">0</b><small>끝낸 Day</small></div><div class="metric"><b id="mFirst">0</b><small>첫 번에 맞힘</small></div><div class="metric"><b id="mRetry">0</b><small>다시 생각함</small></div><div class="metric"><b id="mExpr">0</b><small>자기 표현</small></div></div></div></section></div>
+<script>
+const DAY_META={"1": {"t": "이야기 만나기", "f": "이해 · 등장인물 · 새 말"}, "2": {"t": "왜 이런 일이 생겼을까?", "f": "순서 · 원인과 결과"}, "3": {"t": "마음과 단서 찾기", "f": "감정 · 근거 · 중심 생각"}, "4": {"t": "새 상황에도 써보기", "f": "Transfer · 표현 · 4일 복습"}}; const DAY_WORDS={"5": {"2": ["까닭", "어떤 일이 왜 생겼는지 알려주는 이유예요."], "3": ["마음", "속으로 느끼는 기분이에요."], "4": ["비슷하다", "모양이나 뜻이 서로 닮은 거예요."]}, "6": {"2": ["차례", "어떤 일이 먼저이고 나중인지 나타내는 순서예요."], "3": ["생각", "마음속으로 떠올리는 것이에요."], "4": ["새 상황", "처음 이야기와 다른 새로운 일이에요."]}, "7": {"2": ["원인", "어떤 일이 생기게 한 까닭이에요."], "3": ["근거", "내 생각이 맞다고 보여주는 이야기 속 말이나 일이에요."], "4": ["적용", "배운 생각을 다른 상황에도 써보는 거예요."]}, "8": {"2": ["원인과 결과", "앞의 일이 뒤의 일과 어떻게 이어지는지 보는 거예요."], "3": ["근거", "내 생각을 뒷받침하는 이야기 속 말이나 일이에요."], "4": ["적용", "배운 원리를 다른 상황에 옮겨 써보는 거예요."]}, "9": {"2": ["인과관계", "원인과 결과가 서로 어떻게 이어지는지를 말해요."], "3": ["근거", "주장이나 해석을 뒷받침하는 이야기 속 말이나 사건이에요."], "4": ["전이", "한 상황에서 배운 생각을 다른 상황에도 적용하는 거예요."]}}; let stories=[]; let code=''; let age=0; let eventSeq=0; let profile={completed:[]}; let sid=1; let day=1; let scene=0; let stat=null; let kidPhase='story'; let kidTaskIndex=0; let kidTaskStart=Date.now(); let kidExpressionDone=false;
+const qs=s=>document.querySelector(s); const qsa=s=>Array.from(document.querySelectorAll(s));
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function show(id){['login','ageScreen','libraryScreen','storyScreen'].forEach(x=>qs('#'+x).classList.add('hidden')); qs('#'+id).classList.remove('hidden');}
+function goFullTest(){location.href='/fulltest.html?v=1.5'} function goHome(){goFullTest()} function goLibrary(){if(!code) return show('login'); if(!age) return show('ageScreen'); renderLibrary(); show('libraryScreen');}
+async function api(path,data,method='POST'){const opt={method,headers:{'Content-Type':'application/json'}}; if(method!=='GET') opt.body=JSON.stringify(data||{}); const res=await fetch(path+(method==='GET'&&data?('?'+new URLSearchParams(data)):''),opt); if(!res.ok) throw new Error('HTTP '+res.status); return res.json();}
+async function init(){const r=await fetch('/static/content.json'); stories=await r.json(); renderAge(); show('login');}
+function renderAge(){const map={5:'그림과 듣기 중심',6:'그림과 간단한 까닭',7:'그림과 근거 말하기',8:'읽기와 근거 찾기',9:'읽기와 짧은 설명 쓰기'}; qs('#ageGrid').innerHTML=[5,6,7,8,9].map(a=>`<button class="age box" onclick="pickAge(${a})"><b>${a}세</b><span>${map[a]}</span></button>`).join('');}
+async function login(){const v=qs('#codeInput').value.trim().toUpperCase(); if(!v) return qs('#loginFb').textContent='초대 코드를 넣어주세요.'; try{await api('/api/login',{code:v}); code=v; profile=await api('/api/profile',{code},'GET'); qs('#loginFb').textContent='✓ 코드가 확인됐어요.'; const locked=Number(profile?.profile?.age||0); if(locked>=5&&locked<=9){age=locked;document.body.dataset.age=String(age);renderLibrary();show('libraryScreen');}else{show('ageScreen');}}catch(e){qs('#loginFb').textContent='코드를 다시 확인해 주세요.';}}
+async function pickAge(a){age=a; document.body.dataset.age=String(a); try{await api('/api/profile',{code,age});}catch(e){qs('#ageFb').textContent='나이 저장에 실패했습니다. 다시 눌러주세요.';return;} try{profile=await api('/api/profile',{code},'GET');}catch(e){profile={ok:true,completed:[]};} try{renderLibrary();show('libraryScreen');}catch(e){console.error('library_render_failed',e);qs('#ageFb').textContent='도서관 화면을 여는 중 문제가 생겼습니다.';}}
+function renderLibrary(){qs('#who').textContent=`현재 참가자: ${code} · ${age}세`; const completed=Array.isArray(profile&&profile.completed)?profile.completed:[]; const allowed=new Set(Array.isArray(profile&&profile.pilot_ids)?profile.pilot_ids:stories.map(x=>x.id)); const visible=stories.filter(x=>allowed.has(x.id)); const lib=qs('#lib'); if(age===5){lib.className='kid5-library'; const next=visible.find(x=>!completed.includes(x.id))||visible[0]; const picks=visible.map(s=>{const done=completed.includes(s.id);return `<button class="kid5-storypick" onclick="openStory(${s.id})">${done?'<span class="done">✓ 완료</span>':''}<img src="${s.image_paths[0]}" alt="${esc(s.title)}"><div class="body"><b>${s.id}. ${esc(s.title)}</b><p>${done?'다시 보기':'4번의 모험으로 읽어요'}</p></div></button>`}).join(''); lib.innerHTML=`<div class="kid5-library-hero"><img src="${next.image_paths[0]}" alt="${esc(next.title)}"><div class="kid5-library-copy"><div class="eyebrow">⭐ Pilot A 오늘 읽을 이야기</div><h3>${esc(next.title)}</h3><p>큰 그림을 보고, 이야기를 듣고, 한 가지씩 해봐요.</p><button class="kid5-bigbtn" onclick="openStory(${next.id})">이 이야기 시작하기 →</button></div></div><button class="kid5-all-toggle" onclick="toggleKidStories(this)">📚 다른 이야기 보기</button><div id="kidAllStories" class="kid5-all-stories hidden">${picks}</div>`; return;} lib.className='libgrid'; lib.innerHTML=visible.map(s=>{const done=completed.includes(s.id); const start=(s.id-1)*4+1; return `<button class="library" onclick="openStory(${s.id})">${done?'<span class="done">✓ 완료</span>':''}<img src="${s.image_paths[0]}" alt="${esc(s.title)}"><div class="body"><b>${s.id}. ${esc(s.title)}</b><p>Day ${start}~${start+3} · ${esc(Array.isArray(s.skills) ? s.skills.join(' / ') : String(s.skills || ''))}</p></div></button>`;}).join('');}
+function toggleKidStories(btn){const box=qs('#kidAllStories');if(!box)return;const opening=box.classList.contains('hidden');box.classList.toggle('hidden');btn.textContent=opening?'📚 이야기 목록 접기':'📚 다른 이야기 보기';}
+function S(){return stories.find(x=>x.id===sid)}; function ageKey(){return String(age)}; function scenes(){return S().scene_texts[ageKey()]}; function word(){return day===1?S().words[ageKey()]:DAY_WORDS[age][day]};
+function newStat(){return {done:new Set(),tries:{},first:new Set(),retry:0,expr:0,taskStart:{},hintLevel:{},survey:{fun:0,hard:0,help:-1},start:Date.now()};}
+async function openStory(id){sid=id; day=1; scene=0; stat=newStat(); kidPhase='story';kidTaskIndex=0;kidTaskStart=Date.now();kidExpressionDone=false; try{await api('/api/start',{code,story_id:sid,age});}catch(e){} recordEvent('story_start','story',String(id)); renderStory(); show('storyScreen');}
+function renderStory(){const s=S(); qs('#stTitle').textContent=age===5?`📖 ${s.title}`:`${s.id}. ${s.title}`; qs('#stSub').textContent=s.age_focus[ageKey()]||s.lesson; let nav=''; if(age===5){nav=`<div class="kid-day-progress">${[1,2,3,4].map(d=>`<span class="daydot ${day===d?'on':''} ${stat.done.has(d)?'done':''}">${d}</span>`).join('')}</div>`;}else if(age>=8){nav=`<div class="senior-stepper">${[1,2,3,4].map(d=>`<button class="senior-step ${day===d?'on':''} ${stat.done.has(d)?'done':''}" onclick="pickDay(${d})"><span class="step-no">${d}</span><span class="step-copy"><b>${DAY_META[d].t}</b><small>${DAY_META[d].f}</small></span></button>`).join('')}</div>`;}else{nav=[1,2,3,4].map(d=>`<button class="chip ${day===d?'on':''} ${stat.done.has(d)?'done':''}" onclick="pickDay(${d})"><b>Day ${d} · ${DAY_META[d].t}</b><span>${DAY_META[d].f}</span></button>`).join('');} qs('#chips').innerHTML=nav; qs('#story').innerHTML=storyHtml(); updateMetrics();}
+function pickDay(d){day=d; scene=0; kidPhase='story';kidTaskIndex=0;kidTaskStart=Date.now();kidExpressionDone=false; renderStory();}
+function setScene(i){const max=Math.max(0,scenes().length-1);const n=Math.max(0,Math.min(max,Number(i)));if(!Number.isFinite(n))return;if(n===scene)return;scene=n;recordEvent('scene_view','story',String(scene+1));renderStory();}
+function pickScene(i){setScene(i);}
+function moveScene(delta){setScene(scene+Number(delta||0));}
+function updateMetrics(){qs('#mDay').textContent=stat.done.size; qs('#mFirst').textContent=stat.first.size; qs('#mRetry').textContent=stat.retry; qs('#mExpr').textContent=stat.expr;}
+function speak(text,rate=.9){recordEvent('read_aloud','listening',String(rate)); if(!('speechSynthesis' in window)) return; const u=new SpeechSynthesisUtterance(text); u.lang='ko-KR'; u.rate=rate; speechSynthesis.cancel(); speechSynthesis.speak(u)}
+function sceneLabel(i){return ['처음','다음 일','중요한 장면','계속되는 일','결과','배운 점'][i]||('장면 '+(i+1))}
+function taskData(){const s=S(), sc=scenes(), w=word(); const u=a=>[...new Set(a.filter(Boolean))]; if(day===1) return [{k:'under',t:'이야기 처음',q:'처음에 어떤 일이 있었나요?',o:u([sc[0],sc[4],sc[1]]),c:sc[0],h:'첫 장면을 다시 봐요.'},{k:'important',t:'중요한 장면',q:'뒤의 결과를 바꾸는 중요한 일과 가장 가까운 것은 무엇일까요?',o:u([s.evidence_a,sc[0],sc[2]]),c:s.evidence_a,h:'가운데 장면의 큰 변화를 떠올려봐요.'},{k:'ending',t:'끝에 가까운 일',q:'끝에 가까워질 때 어떤 일이 있었나요?',o:u([sc[4],sc[1],sc[0]]),c:sc[4],h:'다섯 번째 장면을 떠올려봐요.'},{k:'word',t:'새 말 알기',q:`“${w[0]}”은 어떤 뜻일까요?`,o:u([w[1],'아무 뜻이 없는 말이에요.']),c:w[1],h:'새 말 상자를 다시 봐도 좋아요.'}]; if(day===2) return [{k:'seq',t:'장면 차례',q:'처음 → 가운데 → 결과의 차례를 가장 잘 나타낸 것은 무엇일까요?',o:u([`${sc[0]} → ${sc[2]} → ${sc[4]}`,`${sc[4]} → ${sc[0]} → ${sc[2]}`]),c:`${sc[0]} → ${sc[2]} → ${sc[4]}`,h:'처음 장면부터 차례로 떠올려봐요.'},{k:'cause',t:'가장 중요한 까닭',q:s.cause_q,o:u([s.cause_a].concat(s.cause_wrong||[]).concat([sc[0]])),c:s.cause_a,h:'결과가 달라지기 전 행동을 봐요.'},{k:'ce',t:'앞의 선택과 뒤의 결과',q:'앞의 행동이 뒤의 결과와 이어진다는 것을 가장 잘 보여주는 것은 무엇일까요?',o:u([s.evidence_a,sc[0],sc[5]]),c:s.evidence_a,h:'결과 바로 앞의 행동을 찾아봐요.'},{k:'word',t:'생각하는 말',q:`“${w[0]}”은 어떤 뜻일까요?`,o:u([w[1],'아무 일이나 마음대로 고르는 거예요.']),c:w[1],h:'오늘 목표와 이어지는 말이에요.'}]; if(day===3) return [{k:'emo',t:'마음 읽기',q:s.emotion_q,o:u([s.emotion_a].concat(s.emotion_wrong||[])),c:s.emotion_a,h:'그 장면에서 무엇을 보고 어떻게 행동했는지 떠올려봐요.'},{k:'evi',t:'근거 찾기',q:'주인공의 생각이나 마음을 가장 잘 보여주는 이야기 속 일은 무엇일까요?',o:u([s.evidence_a,sc[0],sc[1]]),c:s.evidence_a,h:'마음이 행동으로 드러난 장면을 찾아봐요.'},{k:'lesson',t:'이야기의 뜻과 연결',q:'이 이야기에서 배울 수 있는 생각은 무엇일까요?',o:u([s.lesson].concat(s.lesson_wrong||[])),c:s.lesson,h:'처음과 마지막의 차이를 함께 생각해봐요.'},{k:'word',t:'근거를 찾는 말',q:`“${w[0]}”은 어떤 뜻일까요?`,o:u([w[1],'그림의 색깔만 보는 거예요.']),c:w[1],h:'내 생각이 왜 맞는지 보여줄 때 쓰는 말이에요.'}]; return [{k:'trans',t:'새 상황에 적용하기',q:s.transfer_q,o:u([s.transfer_a].concat(s.transfer_wrong||[]).concat(['결과는 아무 행동과 상관없어요.'])),c:s.transfer_a,h:'이야기에서 어떤 행동이 결과와 이어졌는지 떠올려봐요.'},{k:'rc',t:'4일 복습 · 까닭',q:s.cause_q,o:u([s.cause_a].concat(s.cause_wrong||[]).concat([sc[1]])),c:s.cause_a,h:'Day 2에서 찾은 원인을 떠올려봐요.'},{k:'re',t:'4일 복습 · 마음',q:s.emotion_q,o:u([s.emotion_a].concat(s.emotion_wrong||[])),c:s.emotion_a,h:'Day 3의 마음 단서를 떠올려봐요.'},{k:'rl',t:'4일 복습 · 중심 생각',q:'이 이야기를 한 문장으로 줄이면 어떤 생각이 가장 알맞을까요?',o:u([s.lesson].concat(s.lesson_wrong||[]).concat(['결과는 언제나 운으로만 정해져요.'])),c:s.lesson,h:'중요한 선택과 마지막 결과를 이어봐요.'}]}
+function taskCard(t,i){const opts=t.o.slice(0,age<=6?2:3),key=day+'_'+i;if(!stat.taskStart[key])stat.taskStart[key]=Date.now(); return `<article class="mission"><h3>${t.t}</h3><p>${esc(t.q)}</p><div class="options">${opts.map(opt=>`<button class="choice" data-index="${i}" data-key="${key}" data-skill="${t.k}" data-correct="${opt===t.c?1:0}" onclick="answerTask(this)">${esc(opt)}</button>`).join('')}</div><div class="feedback"></div><div class="hint">💡 ${esc(t.h)} <button class="btn" style="margin-left:6px;padding:7px 10px" onclick="showTaskRelearn(${i})">다시 보기</button></div><div class="relearn-panel" id="relearn_${key}"><b>다시 연결해 보기</b><p>${esc(t.h)}</p></div></article>`}
+function expressionCard(){if(age<=7){const ex=day===3?'“이 장면에서 이런 마음이 보여요.”':'“이 일 때문에 이렇게 되었어요.”'; return `<article class="mission"><h3>🎤 내 말로 설명해요</h3><p>${day===4?'이 이야기에서 배운 생각을 새 상황과 이어서 말해보세요.':'오늘 읽은 이야기에서 가장 기억나는 일을 말해보세요.'}</p><button class="talk" onclick="finishTalk()">🎤<span>말하기</span></button><div class="feedback" id="talkFb">버튼을 누르고 말하고, 끝나면 다시 눌러도 좋아요.</div><div class="sayhelp"><b>도움이 필요하면 이렇게 시작해도 좋아요.</b>${ex}</div></article>`} return `<article class="mission"><h3>✍️ 내 생각 설명하기</h3><p>${day===4?'이야기의 중심 생각을 새 상황과 이어서 한두 문장으로 써보세요.':'오늘 학습에서 가장 중요하다고 생각한 것을 한두 문장으로 써보세요.'}</p><textarea id="writing"></textarea><button class="btn primary" style="margin-top:10px" onclick="finishWrite()">저장</button><div class="feedback" id="writeFb"></div></article>`}
+function surveyBox(){return day!==4?'':`<div class="survey"><b>마지막 Survey</b><div class="survey-row"><b>재미있었나요?</b><div class="emoji-row">${[['😐',1],['🙂',2],['😄',3]].map(x=>`<button class="emoji" onclick="pickSurvey('fun',${x[1]},this)">${x[0]}</button>`).join('')}</div></div><div class="survey-row"><b>어려웠나요?</b><div class="emoji-row">${[['쉬움',1],['알맞음',2],['어려움',3]].map(x=>`<button class="emoji" onclick="pickSurvey('hard',${x[1]},this)">${x[0]}</button>`).join('')}</div></div><div class="survey-row"><b>부모 도움이 필요했나요?</b><div class="emoji-row">${[['혼자 했어요',0],['조금 도움',1],['많이 도움',1]].map(x=>`<button class="emoji" onclick="pickSurvey('help',${x[1]},this)">${x[0]}</button>`).join('')}</div></div></div>`}
+function missionsHtml(){return `<div class="missions"><div class="title">오늘의 문해력 활동</div><p class="sub">힌트를 보며 다시 생각해도 괜찮아요.</p><div class="mission-grid">${taskData().map(taskCard).join('')}${expressionCard()}</div>${surveyBox()}<div style="margin-top:12px"><button class="btn primary" onclick="finishDay()">${day<4?`Day ${day} 완료`:'이 이야기 끝내기'}</button><div class="feedback" id="finishFb"></div></div><div id="end"></div></div>`}
+
+function recordEvent(event_type,skill='',value='',correct=null,attempt=null,mission_id='',hint_level=null){if(!code||!sid)return;const client_event_id=`${code}-${sid}-${day}-${Date.now()}-${++eventSeq}`;api('/api/event',{code,client_event_id,story_id:sid,age,day,mission_id:mission_id||((skill&&skill!=='story'&&skill!=='day')?('d'+day+':'+skill):''),event_type,skill,correct,attempt,hint_level,value:String(value).slice(0,280),device_w:innerWidth,device_h:innerHeight}).catch(()=>{});}
+function kidSceneDots(){return `<div class="kid5-scene-dots">${[0,1,2,3,4,5].map(i=>`<i class="${i===scene?'on':''}"></i>`).join('')}</div>`}
+function kid5ResetForDay(){scene=0;kidPhase='story';kidTaskIndex=0;kidTaskStart=Date.now();kidExpressionDone=false;}
+function kid5MoveScene(delta){const before=scene;scene=Math.max(0,Math.min(5,scene+delta));if(scene!==before){recordEvent('scene_view','story',String(scene+1));renderStory();return;}if(delta>0&&scene===5){kidPhase='task';kidTaskIndex=0;kidTaskStart=Date.now();recordEvent('mission_start','day_'+day,'1');renderStory();}}
+function kid5StartMissions(){kidPhase='task';kidTaskIndex=0;kidTaskStart=Date.now();recordEvent('mission_start','day_'+day,'1');renderStory();}
+function kid5Relearn(){const el=qs('#kidRelearn');if(el)el.classList.add('show');const t=taskData()[kidTaskIndex],key=day+'_'+kidTaskIndex;stat.hintLevel[key]=Math.max(2,stat.hintLevel[key]||0);recordEvent('relearn_view',t?t.k:'','task_'+(kidTaskIndex+1),null,null,t?('d'+day+':'+t.k):'',stat.hintLevel[key]);}
+function answerKidTask(btn){const box=btn.closest('.kid5-mission');const t=taskData()[kidTaskIndex];const key=day+'_'+kidTaskIndex;stat.tries[key]=(stat.tries[key]||0)+1;const attempt=stat.tries[key];const ok=btn.dataset.correct==='1';box.querySelectorAll('.kid5-choice').forEach(x=>x.classList.remove('correct','wrong'));btn.classList.add(ok?'correct':'wrong');const fb=box.querySelector('.kid5-feedback');const hint=box.querySelector('.kid5-hint');if(attempt===1){const ms=Math.max(0,Date.now()-kidTaskStart);recordEvent('response_time',t.k,String(ms),null,1);}recordEvent('answer',t.k,btn.textContent.trim(),ok,attempt,'d'+day+':'+t.k,stat.hintLevel[key]||null);if(ok){if(attempt===1)stat.first.add(key);fb.textContent='⭐ 잘 찾았어요!';hint.classList.remove('show');const rr=qs('#kidRelearn');if(rr)rr.classList.remove('show');const n=qs('#kidNextTask');if(n)n.classList.add('show');}else{stat.retry++;fb.textContent='괜찮아요. 그림을 다시 보고 생각해봐요.';hint.classList.add('show');stat.hintLevel[key]=(stat.hintLevel[key]||0)+1;recordEvent('hint_used',t.k,t.h,false,attempt,'d'+day+':'+t.k,stat.hintLevel[key]);}updateMetrics();}
+function kid5NextTask(){kidTaskIndex++;if(kidTaskIndex>=taskData().length){kidPhase='expression';kidExpressionDone=false;recordEvent('expression_prompt','expression','day_'+day);}else{kidTaskStart=Date.now();recordEvent('mission_start','day_'+day,String(kidTaskIndex+1));}renderStory();}
+function kid5FinishExpression(){if(!kidExpressionDone){kidExpressionDone=true;stat.expr++;recordEvent('expression','speech','spoken',true,1);updateMetrics();}renderStory();}
+function kid5SelectSurvey(k,v,btn){stat.survey[k]=v;btn.parentElement.querySelectorAll('.kid5-emoji').forEach(x=>x.classList.remove('sel'));btn.classList.add('sel');recordEvent('child_survey',k,String(v));}
+async function kid5FinishDay(){stat.done.add(day);recordEvent('day_complete','day',String(day),true,1);if(day<4){day++;kid5ResetForDay();recordEvent('next_day','day',String(day));renderStory();return;}if(!(stat.survey.fun&&stat.survey.hard)){const fb=qs('#kidFinishFb');if(fb)fb.textContent='🙂 두 가지를 골라주세요.';return;}try{await api('/api/survey',{code,story_id:sid,fun:stat.survey.fun,hard:stat.survey.hard,parent_help:-1});}catch(e){}try{await api('/api/complete',{code,story_id:sid,age,duration_sec:(Date.now()-stat.start)/1000});}catch(e){}if(!(profile.completed||[]).includes(sid))profile.completed.push(sid);recordEvent('story_complete','story',String(sid),true,1);kidPhase='complete';renderStory();}
+function kid5Html(){const s=S(),sc=scenes(),w=word();if(kidPhase==='story'){const last=scene===5;return `<div class="kid5-shell"><div class="kid5-progress-note">오늘 ${day}번째 모험 · 그림을 보고 이야기를 들어봐요</div><div class="kid5-card"><div class="kid5-visual"><img src="${s.image_paths[scene]}" alt="${esc(s.title)} 장면 ${scene+1}"><span class="kid5-count">${scene+1} / 6</span></div>${kidSceneDots()}<div class="kid5-body"><div class="kid5-label">${sceneLabel(scene)}</div><div class="kid5-text">${esc(sc[scene])}</div><div class="kid5-actions"><button class="kid5-bigbtn listen" onclick="speak(scenes()[scene],.78)">🔊 이야기 들어보기</button>${scene>0?'<button class="kid5-bigbtn secondary" onclick="kid5MoveScene(-1)">← 이전 그림</button>':'<span></span>'}${last?'<button class="kid5-bigbtn" onclick="kid5StartMissions()">문제 풀러 가기 →</button>':'<button class="kid5-bigbtn" onclick="kid5MoveScene(1)">다음 그림 →</button>'}</div><div class="kid5-word">🌱 <strong>${esc(w[0])}</strong><br>${esc(w[1])}</div></div></div></div>`}
+if(kidPhase==='task'){const t=taskData()[kidTaskIndex],opts=t.o.slice(0,2),imgIndex=[0,2,4,5][kidTaskIndex]??2;return `<div class="kid5-shell"><div class="kid5-progress-note">오늘의 미션 ${kidTaskIndex+1} / ${taskData().length}</div><div class="kid5-card"><div class="kid5-visual"><img src="${s.image_paths[imgIndex]}" alt="미션 그림"></div><div class="kid5-mission"><h2>🔎 ${esc(t.t)}</h2><div class="kid5-question">${esc(t.q)}</div><div class="kid5-options">${opts.map(opt=>`<button class="kid5-choice" data-correct="${opt===t.c?1:0}" onclick="answerKidTask(this)">${esc(opt)}</button>`).join('')}</div><div class="kid5-feedback"></div><div class="kid5-hint">💡 ${esc(t.h)} <button class="btn" style="margin-left:6px" onclick="kid5Relearn()">그림 다시 보기</button></div><div class="kid5-relearn" id="kidRelearn"><img src="${s.image_paths[imgIndex]}" alt="다시 보는 그림"><p>${esc(t.h)}</p></div><button id="kidNextTask" class="kid5-bigbtn kid5-next" onclick="kid5NextTask()">다음 미션 →</button></div></div></div>`}
+if(kidPhase==='expression'){const prompt=day===4?'이 이야기에서 배운 생각을 내 말로 말해봐요.':'오늘 이야기에서 가장 기억나는 일을 내 말로 말해봐요.';return `<div class="kid5-shell"><div class="kid5-card"><div class="kid5-complete"><div class="emoji">🎤</div><h2>내 말로 이야기해요</h2><p class="kid5-question" style="font-size:21px">${prompt}</p>${!kidExpressionDone?'<button class="kid5-mic" onclick="kid5FinishExpression()">🎤<br>다 말했어요</button>':`<div style="font-size:20px;font-weight:900;color:#08794c;margin:18px">✓ 멋지게 말했어요!</div>${day===4?kid5SurveyHtml():'<button class="kid5-bigbtn" onclick="kid5FinishDay()">오늘 모험 끝내기 →</button>'}`}</div></div></div>`}
+if(kidPhase==='complete'){const next=s.id<stories.length?s.id+1:0;return `<div class="kid5-shell"><div class="kid5-card"><div class="kid5-complete"><div class="emoji">🎉</div><h2>이야기 하나를 모두 끝냈어요!</h2><p style="font-size:18px"><b>${esc(s.title)}</b></p><div class="kid5-actions"><button class="kid5-bigbtn secondary" onclick="goLibrary()">📚 도서관</button>${next?`<button class="kid5-bigbtn" onclick="openStory(${next})">다음 이야기 →</button>`:''}</div></div></div></div>`}return ''}
+function kid5SurveyHtml(){return `<div class="kid5-survey"><div class="kid5-survey-card"><b>오늘 이야기 재미있었나요?</b><div class="kid5-emojirow">${[['😐',1],['🙂',2],['😄',3]].map(x=>`<button class="kid5-emoji ${stat.survey.fun===x[1]?'sel':''}" onclick="kid5SelectSurvey('fun',${x[1]},this)">${x[0]}</button>`).join('')}</div></div><div class="kid5-survey-card"><b>오늘 이야기는 어땠나요?</b><div class="kid5-emojirow">${[['쉬웠어요',1],['딱 좋아요',2],['어려웠어요',3]].map(x=>`<button class="kid5-emoji ${stat.survey.hard===x[1]?'sel':''}" style="font-size:15px;font-weight:900" onclick="kid5SelectSurvey('hard',${x[1]},this)">${x[0]}</button>`).join('')}</div></div><button class="kid5-bigbtn" onclick="kid5FinishDay()">이 이야기 끝내기 🎉</button><div class="kid5-feedback" id="kidFinishFb"></div></div>`}
+
+function seniorHtml(){const s=S(),sc=scenes(),w=word(),full=age===9?s.master9:s.age8_summary;const last=sc.length-1;return `<div class="senior-shell"><div class="senior-reader"><section class="senior-visual"><div class="senior-hero"><img src="${s.image_paths[scene]}" alt="${esc(s.title)} 장면 ${scene+1}"><span class="senior-badge">장면 ${scene+1} / ${sc.length}</span></div><div class="senior-scene-copy"><div><span class="senior-eyebrow">${sceneLabel(scene)}</span><p>${esc(sc[scene])}</p></div><button class="btn senior-listen" onclick="speak(scenes()[scene],.9)">🔊 이 장면 듣기</button></div><div class="senior-thumbs">${s.image_paths.map((src,i)=>`<button class="${i===scene?'on':''}" onclick="pickScene(${i})" aria-label="장면 ${i+1}" aria-current="${i===scene?'true':'false'}"><img src="${src}" alt=""><span>${i+1}</span></button>`).join('')}</div><div class="senior-scene-nav"><button class="btn" ${scene===0?'disabled':''} onclick="moveScene(-1)">← 이전 장면</button><button class="btn primary" ${scene===last?'disabled':''} onclick="moveScene(1)">다음 장면 →</button></div></section><section class="senior-reading"><div class="senior-reading-head"><div><span class="senior-eyebrow">📖 오늘의 읽기</span><h3>${age===9?'전체 이야기 읽기':'핵심 이야기 읽기'}</h3></div><button class="btn" onclick="speak(${JSON.stringify(full)},.9)">🔊 전체 듣기</button></div><div class="senior-fulltext">${esc(full)}</div><div class="senior-meta"><div class="senior-meta-card word"><span class="senior-eyebrow">🌱 오늘의 새 말</span><b>${esc(w[0])}</b><p>${esc(w[1])}</p></div><div class="senior-meta-card goal"><span class="senior-eyebrow">🎯 오늘 목표</span><b>${DAY_META[day].t}</b><p>${DAY_META[day].f}</p></div></div></section></div><section class="senior-activity">${missionsHtml()}</section></div>`}
+function storyHtml(){const s=S(), sc=scenes(), w=word(); if(age===5) return kid5Html(); if(age<=7) return `<div class="storylayout"><div class="viewer"><div class="storybox"><div class="heroimg"><img src="${s.image_paths[scene]}" alt=""><span class="badge">${scene+1} / 6</span></div><div class="caption"><h3>${sceneLabel(scene)}</h3><div class="bigtext">${esc(sc[scene])}</div></div><div class="thumbs">${s.image_paths.map((src,i)=>`<button class="${i===scene?'on':''}" onclick="pickScene(${i})"><img src="${src}"></button>`).join('')}</div></div><div class="missions">${missionsHtml()}</div></div><div class="rightcol"><div class="wordbox"><b>오늘의 새 말</b><p><b>${esc(w[0])}</b></p><p>${esc(w[1])}</p></div><div class="wordbox"><b>읽어주기</b><p>버튼을 누르면 현재 장면 글을 들을 수 있어요.</p><div class="scene-nav"><button class="btn" onclick="speak(scenes()[scene], .9)">🔊 읽어주기</button><button class="btn" onclick="speak(scenes()[scene], .72)">🐢 천천히</button></div></div><div class="wordbox"><b>장면 보기</b><p>왼쪽 큰 그림과 아래 작은 그림으로 장면을 바꿔보세요.</p><div class="scene-nav"><button class="btn" onclick="moveScene(-1)">← 이전</button><button class="btn primary" onclick="moveScene(1)">다음 →</button></div></div><div class="wordbox"><b>오늘 목표</b><p>${DAY_META[day].t}</p><p>${DAY_META[day].f}</p></div></div></div>`; return seniorHtml();}
+function showTaskRelearn(i){const t=taskData()[i],key=day+'_'+i,el=qs('#relearn_'+key);if(el)el.classList.add('show');stat.hintLevel[key]=Math.max(2,stat.hintLevel[key]||0);recordEvent('relearn_view',t.k,'task_'+(i+1),null,null,'d'+day+':'+t.k,stat.hintLevel[key]);}
+function answerTask(btn){const box=btn.closest('.mission');box.querySelectorAll('.choice').forEach(x=>x.classList.remove('correct','wrong'));const ok=btn.dataset.correct==='1';btn.classList.add(ok?'correct':'wrong');const k=btn.dataset.key,skill=btn.dataset.skill,i=Number(btn.dataset.index||0);stat.tries[k]=(stat.tries[k]||0)+1;const attempt=stat.tries[k];if(attempt===1){const ms=Math.max(0,Date.now()-(stat.taskStart[k]||Date.now()));recordEvent('response_time',skill,String(ms),null,1,'d'+day+':'+skill);}if(ok&&attempt===1)stat.first.add(k);if(!ok){stat.retry++;stat.hintLevel[k]=(stat.hintLevel[k]||0)+1;recordEvent('hint_used',skill,taskData()[i].h,false,attempt,'d'+day+':'+skill,stat.hintLevel[k]);}box.querySelector('.feedback').textContent=ok?'✓ 잘 찾았어요!':'한 번 더 생각해봐요.';box.querySelector('.hint').classList.toggle('show',!ok);if(ok){const rp=qs('#relearn_'+k);if(rp)rp.classList.remove('show');}updateMetrics();recordEvent('answer',skill,btn.textContent.trim(),ok,attempt,'d'+day+':'+skill,stat.hintLevel[k]||null);}
+function finishTalk(){stat.expr++; updateMetrics(); qs('#talkFb').textContent='✓ 내 말로 설명했어요.'; recordEvent('expression','speech','spoken',true,1,'d'+day+':speech');}
+function finishWrite(){const v=qs('#writing').value.trim(); if(!v) return qs('#writeFb').textContent='한 문장이라도 적어보세요.'; stat.expr++; updateMetrics(); qs('#writeFb').textContent='✓ 내 생각을 남겼어요.'; recordEvent('expression','writing',v.slice(0,150),true,1,'d'+day+':writing');}
+function pickSurvey(k,v,btn){stat.survey[k]=v; btn.parentElement.querySelectorAll('.emoji').forEach(x=>x.classList.remove('sel')); btn.classList.add('sel');}
+async function finishDay(){recordEvent('day_complete','day',String(day),true,1);if(day<4){stat.done.add(day); qs('#finishFb').textContent=`✓ Day ${day}가 저장됐어요.`; const next=day+1; setTimeout(()=>{day=next;scene=0;recordEvent('next_day','day',String(day),true,1);renderStory();},300); return;} if(!(stat.survey.fun&&stat.survey.hard&&stat.survey.help>-1)) return qs('#finishFb').textContent='세 가지 Survey를 모두 골라주세요.'; stat.done.add(4); try{await api('/api/survey',{code,story_id:sid,fun:stat.survey.fun,hard:stat.survey.hard,parent_help:stat.survey.help});}catch(e){} try{await api('/api/complete',{code,story_id:sid,age,duration_sec:(Date.now()-stat.start)/1000});}catch(e){} if(!(profile.completed||[]).includes(sid)) profile.completed.push(sid); recordEvent('story_complete','story',String(sid),true,1);qs('#finishFb').textContent='✓ 이야기와 Survey가 저장됐어요.'; renderEnd();}
+function renderEnd(){const s=S(); const next=s.id<stories.length?s.id+1:0; qs('#end').innerHTML=`<div class="end"><div style="font-size:52px">🎉</div><h2>오늘 이야기 끝!</h2><p class="sub"><b>${esc(s.title)}</b>의 4일 학습을 모두 마쳤어요.</p><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px"><button class="btn" onclick="goLibrary()">이야기 도서관으로</button>${next?`<button class="btn primary" onclick="openStory(${next})">다음 이야기 →</button>`:''}</div></div>`}
+init();
+</script></body></html>

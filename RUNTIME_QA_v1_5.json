@@ -1,0 +1,39 @@
+{
+  "version": {
+    "ok": true,
+    "product": "Read100",
+    "version": "1.5",
+    "evidence_loop": "Observe → Recover → Transfer → Prove Growth",
+    "port": 8920
+  },
+  "mastery_expected": {
+    "P01-FQ1Z0P": "independent_mastery",
+    "P02-2TCQB7": "supported_mastery",
+    "P03-8ML1HG": "fragile_understanding",
+    "P04-GMW8H8": "needs_relearning"
+  },
+  "mastery_actual": {
+    "P01-FQ1Z0P": "independent_mastery",
+    "P02-2TCQB7": "supported_mastery",
+    "P03-8ML1HG": "fragile_understanding",
+    "P04-GMW8H8": "needs_relearning"
+  },
+  "mastery_4_of_4": true,
+  "human_agreement": true,
+  "human_false_positive": false,
+  "validation_summary": {
+    "count": 1,
+    "agreement_rate": 100.0,
+    "false_positive_rate": 0.0,
+    "gate_false_positive_le_5": true
+  },
+  "growth_blocks": 5,
+  "pages": {
+    "fulltest.html": 200,
+    "parent.html": 200,
+    "owner.html": 200,
+    "validation.html": 200,
+    "evidence.html": 200,
+    "static/content.json": 200
+  }
+}

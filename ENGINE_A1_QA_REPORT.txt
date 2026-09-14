@@ -1,0 +1,13 @@
+Read100 v1.5 — Evidence Learning Engine Reference A1
+===================================================
+PASS - Existing static files preserved: 13/13, changed 0.
+PASS - server.py imports shared Read100 v1.5 adapter.
+PASS - Legacy insufficient_evidence behavior preserved by versioned policy.
+PASS - Mastery classifier delegates to shared deterministic core.
+PASS - Growth checkpoint numeric fields delegate to shared deterministic core.
+PASS - API smoke: login -> events -> complete -> parent growth -> human validation.
+PASS - Smoke fixture state: supported_mastery; agreement 100%.
+NO CHANGE - Child UI/content/scenes.
+NO CHANGE - AWS/Staging/Production.
+PENDING - Actual AWS candidate deploy/read-back.
+PENDING - Real child Human Acceptance after shared-engine deployment.

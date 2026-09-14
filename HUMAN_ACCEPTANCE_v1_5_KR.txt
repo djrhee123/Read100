@@ -1,0 +1,40 @@
+Read100 v1.5 Human Acceptance
+=============================
+
+A. 실행
+[ ] ZIP을 새 폴더에 압축 해제
+[ ] START_READ100_PILOT.cmd 한 번 실행
+[ ] 주소 = http://127.0.0.1:8919/fulltest.html?v=1.5
+[ ] 첫 화면에 Read100 v1.5 표시
+
+B. 아이 화면 Regression
+[ ] 5세 Kid-first UI 유지
+[ ] 6~7세 picture-first UI 유지
+[ ] 8~9세 Desktop 2열 / Mobile·Tablet 1열 유지
+[ ] 장면 thumbnail / 이전 / 다음 이동 정상
+[ ] Horizontal overflow 없음
+
+C. Evidence Loop
+[ ] 첫 오답 시 Hint 표시
+[ ] 다시 보기(Relearn) 가능
+[ ] 재시도 후 회복 가능
+[ ] Day 4 Transfer 실행 가능
+[ ] 관찰 기록에 response_time / hint_used / relearn_view / answer 저장
+[ ] day / mission_id / hint_level 확인 가능
+
+D. Parent Proof
+[ ] 첫 시도 성공 표시
+[ ] 힌트 의존 표시
+[ ] Transfer 표시
+[ ] Day 20/40/60/80/100 Growth Proof 카드 표시
+
+E. Human Validation
+[ ] 시스템 판단을 보기 전에 사람 판단 입력 가능
+[ ] 저장 후 시스템 판단 공개
+[ ] Agreement 표시
+[ ] False Positive 자동 계산
+
+F. Release 판정
+실제 5~9세 아동 테스트 전에는 Pilot Ready / Release Ready로 판정하지 않습니다.
+1차 Human Validation: 5~9세 각 3명, 총 15명.
+목표: False Positive ≤5%, Event missing 0, Critical UI Failure 0.

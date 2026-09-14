@@ -1,0 +1,14 @@
+Read100 Observer / Owner Runtime Configuration Example
+======================================================
+
+Local/remote URLs and credentials are environment-specific.
+Do not commit real Owner PIN or Observer PIN values.
+
+Recommended environment variables:
+- READ100_OWNER_PIN=<provision outside Git>
+- READ100_OBSERVER_PIN=<provision outside Git>
+- READ100_REMOTE_PILOT=1 for remote pilot mode
+
+Runtime config:
+- Copy config.example.json to config.json locally.
+- Replace placeholder participant codes with provisioned pilot codes outside Git.

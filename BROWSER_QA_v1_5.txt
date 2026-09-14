@@ -1,0 +1,10 @@
+Read100 v1.5 Browser QA
+========================
+5 ages × 4 viewports = 20/20 PASS
+Viewports: 390x844, 820x1180, 1280x800, 1440x900
+Horizontal overflow failures: 0
+Critical UI missing: 0
+Evidence interaction age 8: response_time + hint_used + relearn_view + recovery answer PASS
+Evidence interaction age 5: response_time + hint_used + relearn_view + recovery answer PASS
+
+Note: build environment blocks Chromium direct navigation to 127.0.0.1 by administrator policy. Browser DOM/CSS/interaction QA used exact final HTML/CSS/JS with only network calls mocked. Actual server/API HTTP read-back was verified separately. Windows browser Human Acceptance remains PENDING.

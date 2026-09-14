@@ -1,0 +1,23 @@
+[13/Sep/2026 07:15:38] "POST /api/login HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/start HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/event HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "POST /api/complete HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "GET /api/parent/summary" 200 -
+[13/Sep/2026 07:15:38] "POST /api/validation/human HTTP/1.1" 200 -
+[13/Sep/2026 07:15:38] "GET /api/validation/summary" 200 -
+{
+  "status": "PASS",
+  "login": "PASS",
+  "event_write": "PASS",
+  "mastery_state": "supported_mastery",
+  "growth_block": "PASS",
+  "human_validation": "PASS",
+  "agreement_rate": 100.0,
+  "static_mutation": 0
+}

@@ -1,0 +1,277 @@
+[
+  {
+    "story_id": 1,
+    "days": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "primary_skill": "내용 이해·어휘",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 2,
+    "days": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "primary_skill": "내용 이해·어휘",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 3,
+    "days": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "primary_skill": "내용 이해·어휘",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 4,
+    "days": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "primary_skill": "내용 이해·어휘",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 5,
+    "days": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "primary_skill": "내용 이해·어휘",
+    "proof_checkpoint": true
+  },
+  {
+    "story_id": 6,
+    "days": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "primary_skill": "순서·원인 결과",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 7,
+    "days": [
+      25,
+      26,
+      27,
+      28
+    ],
+    "primary_skill": "순서·원인 결과",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 8,
+    "days": [
+      29,
+      30,
+      31,
+      32
+    ],
+    "primary_skill": "순서·원인 결과",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 9,
+    "days": [
+      33,
+      34,
+      35,
+      36
+    ],
+    "primary_skill": "순서·원인 결과",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 10,
+    "days": [
+      37,
+      38,
+      39,
+      40
+    ],
+    "primary_skill": "순서·원인 결과",
+    "proof_checkpoint": true
+  },
+  {
+    "story_id": 11,
+    "days": [
+      41,
+      42,
+      43,
+      44
+    ],
+    "primary_skill": "감정·의도",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 12,
+    "days": [
+      45,
+      46,
+      47,
+      48
+    ],
+    "primary_skill": "감정·의도",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 13,
+    "days": [
+      49,
+      50,
+      51,
+      52
+    ],
+    "primary_skill": "감정·의도",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 14,
+    "days": [
+      53,
+      54,
+      55,
+      56
+    ],
+    "primary_skill": "감정·의도",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 15,
+    "days": [
+      57,
+      58,
+      59,
+      60
+    ],
+    "primary_skill": "감정·의도",
+    "proof_checkpoint": true
+  },
+  {
+    "story_id": 16,
+    "days": [
+      61,
+      62,
+      63,
+      64
+    ],
+    "primary_skill": "근거·추론",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 17,
+    "days": [
+      65,
+      66,
+      67,
+      68
+    ],
+    "primary_skill": "근거·추론",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 18,
+    "days": [
+      69,
+      70,
+      71,
+      72
+    ],
+    "primary_skill": "근거·추론",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 19,
+    "days": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "primary_skill": "근거·추론",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 20,
+    "days": [
+      77,
+      78,
+      79,
+      80
+    ],
+    "primary_skill": "근거·추론",
+    "proof_checkpoint": true
+  },
+  {
+    "story_id": 21,
+    "days": [
+      81,
+      82,
+      83,
+      84
+    ],
+    "primary_skill": "통합·Transfer",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 22,
+    "days": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "primary_skill": "통합·Transfer",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 23,
+    "days": [
+      89,
+      90,
+      91,
+      92
+    ],
+    "primary_skill": "통합·Transfer",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 24,
+    "days": [
+      93,
+      94,
+      95,
+      96
+    ],
+    "primary_skill": "통합·Transfer",
+    "proof_checkpoint": false
+  },
+  {
+    "story_id": 25,
+    "days": [
+      97,
+      98,
+      99,
+      100
+    ],
+    "primary_skill": "통합·Transfer",
+    "proof_checkpoint": true
+  }
+]

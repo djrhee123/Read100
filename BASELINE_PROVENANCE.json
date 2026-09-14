@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "repository": "Read100",
+  "prepared_at_utc": "2026-09-14T01:23:04+00:00",
+  "source_package": "Read100_v1_5_Evidence_Engine_Reference_A1.zip",
+  "source_package_sha256": "c5bf18ac87bb5683460b738022ded6ff053e422826016c48b697c680f474564b",
+  "reference": "Read100 v1.5 Evidence Engine Reference A1",
+  "excluded_from_git_for_safety": [
+    "PILOT_INVITES.txt",
+    "config.json",
+    "OWNER_INFO.txt",
+    "__pycache__/*",
+    "*.pyc"
+  ],
+  "added_repository_files": [
+    "README.md",
+    ".gitignore",
+    "BASELINE_PROVENANCE.json",
+    ".github/workflows/baseline-integrity.yml",
+    "SOURCE_PRESERVATION_REPORT.json"
+  ],
+  "aws_staging_production_mutation": "NONE",
+  "existing_github_repository_mutation": "NONE",
+  "sanitized_files": {
+    "config.example.json": "derived from config.json with all participant credentials replaced by placeholders",
+    "OWNER_INFO.example.txt": "replaces legacy OWNER_INFO.txt containing a literal PIN",
+    "ENGINE_A1_API_SMOKE.py": "one embedded live participant code replaced with runtime selection from local config; test semantics preserved"
+  }
+}

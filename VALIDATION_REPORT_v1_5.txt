@@ -1,0 +1,111 @@
+Read100 v1.5 Evidence Loop — Validation Report
+==============================================
+
+1. Scope
+- Focus: Read100 ages 5–9 only.
+- Read100 Next ages 10–13: FROZEN until 5–9 Evidence Gates pass.
+- Baseline: v1.4.5 Scene Navigation Fix.
+- Core loop: Observe → Recover → Transfer → Prove Growth.
+
+2. Baseline preservation
+- Stories: 25 / 25 PASS
+- Physical scene references: 150 / 150 PASS
+- Unique scene references: 150 / 150 PASS
+- Missing scene files: 0 PASS
+- content.json SHA-256 is byte-identical to v1.4.5 baseline: PASS
+- Existing scene navigation functions setScene / pickScene / moveScene preserved: PASS
+- 5-year-old kid5MoveScene preserved: PASS
+
+3. Evidence Contract v1.0
+PASS
+New event identity fields:
+- day
+- mission_id
+- hint_level
+Common evidence events:
+- response_time
+- answer
+- hint_used
+- relearn_view
+- read_aloud
+- day_complete
+- next_day
+- story_complete
+
+4. Observer Engine v2
+Synthetic deterministic classification test:
+- Independent Mastery: PASS
+- Supported Mastery: PASS
+- Fragile Understanding: PASS
+- Needs Relearning: PASS
+Result: 4 / 4 PASS
+
+Important: Synthetic classification PASS is not Human Validation.
+
+5. Recovery / Transfer parity
+Age 5 interaction harness:
+- response_time PASS
+- wrong answer PASS
+- hint_used + hint_level PASS
+- relearn_view PASS
+- recovery answer(attempt > 1) PASS
+
+Age 8 interaction harness:
+- response_time PASS
+- wrong answer PASS
+- hint_used + hint_level PASS
+- relearn_view PASS
+- recovery answer(attempt > 1) PASS
+
+6. Growth Proof
+- Day 20 block: Story 1–5 PRESENT
+- Day 40 block: Story 6–10 PRESENT
+- Day 60 block: Story 11–15 PRESENT
+- Day 80 block: Story 16–20 PRESENT
+- Day 100 block: Story 21–25 PRESENT
+- First-attempt / hint dependency / transfer comparison: PRESENT
+- Parent Growth Proof screen: PRESENT
+
+7. Human Validation Kit
+- Blind Human Observation: PRESENT
+- 4 Human states: PRESENT
+- System judgment revealed after Human save: PRESENT
+- Agreement calculation: PASS in synthetic API test
+- False Positive calculation: PASS in synthetic API test
+- Real-child Human Validation: PENDING
+
+8. Browser QA
+- Exact final HTML/CSS/JS DOM harness
+- Ages: 5 / 6 / 7 / 8 / 9
+- Viewports: 390×844 / 820×1180 / 1280×800 / 1440×900
+- Cases: 20
+- PASS: 20 / 20
+- Horizontal overflow failures: 0
+- Critical UI missing: 0
+
+Build-environment limitation:
+Chromium direct navigation to 127.0.0.1 is blocked by administrator policy.
+Therefore browser DOM/CSS/interaction QA used exact final app HTML/CSS/JS with only network calls mocked.
+Actual server/API HTTP behavior was verified independently over localhost.
+
+9. Runtime/API
+- /api/version = 1.5 PASS
+- Full Test HTTP 200 PASS
+- Parent HTTP 200 PASS
+- Observer HTTP 200 PASS
+- Human Validation HTTP 200 PASS
+- Evidence explanation HTTP 200 PASS
+- content.json HTTP 200 PASS
+- Growth blocks = 5 PASS
+
+10. Release judgment
+- Static/code QA: PASS
+- Automated Evidence Engine QA: PASS
+- Browser DOM/interaction regression: PASS
+- Windows Human Acceptance: PENDING
+- Real 5–9 child Human Validation: PENDING
+- Observer-Human False Positive ≤5% real-data Gate: PENDING
+- 30-child Validation: PENDING
+- 100-child Pilot: PENDING
+- Paid Pilot: PENDING
+- Pilot Ready / Release Ready: NOT DECLARED
