@@ -1,0 +1,38 @@
+# Secrets / local runtime configuration
+.env
+.env.*
+*.env
+*SECRET*
+*secret*
+*PRIVATE*
+*private*
+*INVITE*
+*invite*
+PILOT_INVITES.txt
+config.json
+participants_seed.json
+
+# Runtime / evidence data
+*.db
+*.sqlite
+*.sqlite3
+data/
+evidence-export/
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node / build
+node_modules/
+dist/
+build/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
