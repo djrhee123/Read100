@@ -1,33 +1,141 @@
 {
   "version": "1.5",
   "checks": [
-    {"check":"25 stories","pass":true,"detail":"25"},
-    {"check":"150 physical scene refs","pass":true,"detail":"150"},
-    {"check":"150 unique scene refs","pass":true,"detail":"150"},
-    {"check":"scene files exist","pass":true,"detail":"0 missing"},
-    {"check":"content.json baseline preserved","pass":true,"detail":"506df58f9f8ea0f7e928b32d784cac44eef2a46f3096f6353e66c7766503df4c"},
-    {"check":"server.py syntax","pass":true,"detail":""},
-    {"check":"JS app.html","pass":true,"detail":""},
-    {"check":"JS evidence.html","pass":true,"detail":""},
-    {"check":"JS fulltest.html","pass":true,"detail":""},
-    {"check":"JS owner.html","pass":true,"detail":""},
-    {"check":"JS parent.html","pass":true,"detail":""},
-    {"check":"JS validation.html","pass":true,"detail":""},
-    {"check":"function setScene","pass":true,"detail":""},
-    {"check":"function pickScene","pass":true,"detail":""},
-    {"check":"function moveScene","pass":true,"detail":""},
-    {"check":"function kid5MoveScene","pass":true,"detail":""},
-    {"check":"function showTaskRelearn","pass":true,"detail":""},
-    {"check":"function answerTask","pass":true,"detail":""},
-    {"check":"function kid5Relearn","pass":true,"detail":""},
-    {"check":"v1.5 visible marker","pass":true,"detail":""},
-    {"check":"Evidence Contract exists","pass":true,"detail":""},
-    {"check":"Human Validation page exists","pass":true,"detail":""},
-    {"check":"Parent Growth Proof exists","pass":true,"detail":""},
-    {"check":"launcher port 8919","pass":true,"detail":""},
-    {"check":"Browser responsive 20/20","pass":true,"detail":""},
-    {"check":"Browser evidence interaction","pass":true,"detail":""},
-    {"check":"Age5 evidence interaction","pass":true,"detail":""}
+    {
+      "check": "25 stories",
+      "pass": true,
+      "detail": "25"
+    },
+    {
+      "check": "150 physical scene refs",
+      "pass": true,
+      "detail": "150"
+    },
+    {
+      "check": "150 unique scene refs",
+      "pass": true,
+      "detail": "150"
+    },
+    {
+      "check": "scene files exist",
+      "pass": true,
+      "detail": "0 missing"
+    },
+    {
+      "check": "content.json baseline preserved",
+      "pass": true,
+      "detail": "506df58f9f8ea0f7e928b32d784cac44eef2a46f3096f6353e66c7766503df4c"
+    },
+    {
+      "check": "server.py syntax",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS app.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS evidence.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS fulltest.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS owner.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS parent.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "JS validation.html",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function setScene",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function pickScene",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function moveScene",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function kid5MoveScene",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function showTaskRelearn",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function answerTask",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "function kid5Relearn",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "v1.5 visible marker",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Evidence Contract exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Human Validation page exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Parent Growth Proof exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "launcher port 8919",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Browser responsive 20/20",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Browser evidence interaction",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Age5 evidence interaction",
+      "pass": true,
+      "detail": ""
+    }
   ],
   "passed": 27,
   "failed": 0
